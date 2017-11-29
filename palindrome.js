@@ -17,6 +17,13 @@ function stringToArray(string){
 	return stringArray;
 }
 
+function createReverseArray(array) {
+	var newArray = [];
+	for (var i = 1; i <= array.length; i++) {
+		newArray[array.length - i] = array[i - 1];
+	}
+	return newArray;
+}
 
 function areArraysSameLength(arrayOne, arrayTwo){
 	if(arrayOne.length != arrayTwo.length){
@@ -25,6 +32,10 @@ function areArraysSameLength(arrayOne, arrayTwo){
 	else{
 		return true;
 	}
+}
+
+function compareSameLengthArrays(arrayOne, arrayTwo) {
+	
 }
 // function compareArrays(arrayOne, arrayTwo){
 // 	var same = true;
@@ -40,4 +51,4 @@ var testArray3 = ["x", "f", "b", "f"];
 
 console.log(areArraysSameLength(testArray, testArray3));
 console.log(areArraysSameLength(testArray2, testArray3));
-console.log(areArraysSameLength(testArray, testArray2));
+console.log(createReverseArray(testArray3));
