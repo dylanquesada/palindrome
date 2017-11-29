@@ -25,14 +25,14 @@ function createReverseArray(array) {
 	return newArray;
 }
 
-function areArraysSameLength(arrayOne, arrayTwo){
-	if(arrayOne.length != arrayTwo.length){
-		return false;
-	}
-	else{
-		return true;
-	}
-}
+// function areArraysSameLength(arrayOne, arrayTwo){
+// 	if(arrayOne.length != arrayTwo.length){
+// 		return false;
+// 	}
+// 	else{
+// 		return true;
+// 	}
+// }
 
 function compareSameLengthArrays(arrayOne, arrayTwo) {
 	for (var i = arrayOne.length - 1; i >= 0; i--){
@@ -43,15 +43,19 @@ function compareSameLengthArrays(arrayOne, arrayTwo) {
 	}	
 }
 
+function runPalindromeDetector(){
+	let input = userInput();
+	input = stringToArray(input);
+	let test = createReverseArray(input);
+	if(!compareSameLengthArrays(input, test)){
+		alert("That's not a palindrome!");
+		return false;
+	}
+	else
+	{
+		alert("Okay! That's a pallindrome!");
+		return true;
+	}
+}
 
-var test = "palindrome";
-var test2 = "lalal";
-var testArray = ["a", "b", "c"];
-var testArray2 = ["a", "b", "a"];
-var testArray3 = ["x", "f", "b", "f"];
-
-console.log(areArraysSameLength(testArray, testArray3));
-console.log(areArraysSameLength(testArray2, testArray3));
-console.log(createReverseArray(testArray3));
-console.log(compareSameLengthArrays(testArray, testArray2));
-console.log(compareSameLengthArrays(testArray2, testArray2));
+runPalindromeDetector();
