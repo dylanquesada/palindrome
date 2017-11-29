@@ -18,7 +18,26 @@ function stringToArray(string){
 }
 
 
+function areArraysSameLength(arrayOne, arrayTwo){
+	if(arrayOne.length != arrayTwo.length){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+// function compareArrays(arrayOne, arrayTwo){
+// 	var same = true;
+// 	if
+
+
+// }
 var test = "palindrome";
 var test2 = "lalal";
-console.log(stringToArray(test));
-console.log(stringToArray(test2));
+var testArray = ["a", "b", "c"];
+var testArray2 = ["a", "b", "c"];
+var testArray3 = ["x", "f", "b", "f"];
+
+console.log(areArraysSameLength(testArray, testArray3));
+console.log(areArraysSameLength(testArray2, testArray3));
+console.log(areArraysSameLength(testArray, testArray2));
