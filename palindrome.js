@@ -35,20 +35,23 @@ function areArraysSameLength(arrayOne, arrayTwo){
 }
 
 function compareSameLengthArrays(arrayOne, arrayTwo) {
-	
+	for (var i = arrayOne.length - 1; i >= 0; i--){
+		if(arrayOne[i] != arrayTwo[i]){
+			return false;
+		}
+		return true;
+	}	
 }
-// function compareArrays(arrayOne, arrayTwo){
-// 	var same = true;
-// 	if
 
 
-// }
 var test = "palindrome";
 var test2 = "lalal";
 var testArray = ["a", "b", "c"];
-var testArray2 = ["a", "b", "c"];
+var testArray2 = ["a", "b", "a"];
 var testArray3 = ["x", "f", "b", "f"];
 
 console.log(areArraysSameLength(testArray, testArray3));
 console.log(areArraysSameLength(testArray2, testArray3));
 console.log(createReverseArray(testArray3));
+console.log(compareSameLengthArrays(testArray, testArray2));
+console.log(compareSameLengthArrays(testArray2, testArray2));
